@@ -1,4 +1,5 @@
-if [ ! -d "${NODENV_ROOT}/versions/${NODENV_VERSION}" ] \
+if [ "$NODENV_VERSION" != "system" ] \
+  && [ ! -d "${NODENV_ROOT}/versions/${NODENV_VERSION}" ] \
   && [ ! -d "${NODENV_ROOT}/versions/${NODENV_VERSION/v/}" ] \
   && [ ! -d "${NODENV_ROOT}/versions/${NODENV_VERSION#node-}" ] \
   && [ ! -d "${NODENV_ROOT}/versions/${NODENV_VERSION#node-v}" ] ; then
